@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CustomerContentViewer.ConsoleApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Prod"
+      }
+    }
+  }
+}
+     
