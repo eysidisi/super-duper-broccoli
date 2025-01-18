@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CustomerOrderViewer.Tests.E2E
+namespace CustomerOrderViewer.Test.E2E
 {
     public class CustomerOrderE2ETests : IDisposable
     {
@@ -114,7 +114,6 @@ namespace CustomerOrderViewer.Tests.E2E
             Assert.Contains("Laptop", itemNamesOrder3);
             Assert.Contains("Headphones", itemNamesOrder3);
         }
-
 
         public void Dispose()
         {

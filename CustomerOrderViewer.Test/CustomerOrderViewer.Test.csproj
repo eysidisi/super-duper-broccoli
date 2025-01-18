@@ -28,8 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CustomerOrderViewer.Console\CustomerOrderViewer.Console.csproj" />
     <ProjectReference Include="..\CustomerOrderViewer.Service\CustomerOrderViewer.Service.csproj" />
-    <ProjectReference Include="..\CustomerOrderViewerConsole\CustomerOrderViewer.Console.csproj" />
   </ItemGroup>
 
   <ItemGroup>

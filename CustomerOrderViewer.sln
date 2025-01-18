@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer.Test", "CustomerOrderViewer\CustomerOrderViewer.Test.csproj", "{471BD53E-D2AE-45CD-A357-E569BD366E17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer.Test", "CustomerOrderViewer.Test\CustomerOrderViewer.Test.csproj", "{471BD53E-D2AE-45CD-A357-E569BD366E17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer.Console", "CustomerOrderViewerConsole\CustomerOrderViewer.Console.csproj", "{D75B4B03-638F-466E-AE83-2B760D00975F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer.Console", "CustomerOrderViewer.Console\CustomerOrderViewer.Console.csproj", "{D75B4B03-638F-466E-AE83-2B760D00975F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerOrderViewer.Service", "CustomerOrderViewer.Service\CustomerOrderViewer.Service.csproj", "{0D3403A7-B51C-429E-9771-5C9B780657FA}"
 EndProject

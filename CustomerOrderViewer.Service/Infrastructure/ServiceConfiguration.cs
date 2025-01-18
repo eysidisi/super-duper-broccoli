@@ -28,6 +28,7 @@ namespace CustomerOrderViewer.Infrastructure
             serviceCollection.AddSingleton<IConfiguration>(configuration);
             serviceCollection.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
             serviceCollection.AddScoped<IOrderRepository, OrderRepository>();
             serviceCollection.AddScoped<IOrderService, OrderService>();
 

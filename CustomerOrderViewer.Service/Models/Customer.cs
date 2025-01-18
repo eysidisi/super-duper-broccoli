@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
 namespace CustomerOrderViewer.Models
@@ -9,17 +10,7 @@ namespace CustomerOrderViewer.Models
         public string Name { get; set; }
 
         // Navigation property for the related orders
-        public ICollection<Order> Orders { get; set; }
-    }
-
-    public class Order
-    {
-        public int OrderId { get; set; }
-        public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
-
-        public ICollection<ItemOrder> ItemOrders { get; set; } = new List<ItemOrder>(); // Join table for many-to-many
-        public ICollection<Item> Items => ItemOrders.Select(io => io.Item).ToList(); // Navigation property for items
+        public virtual ICollection<Order> Orders { get; set; }
     }
 
     public class Item
@@ -27,16 +18,43 @@ namespace CustomerOrderViewer.Models
         public int ItemId { get; set; }
         public string Name { get; set; }
 
-        public ICollection<ItemOrder> ItemOrders { get; set; } = new List<ItemOrder>(); // Navigation property for many-to-many
+        // Navigation property for the related ItemOrders (join table)
+        public virtual ICollection<ItemOrder> ItemOrders { get; set; } = new List<ItemOrder>(); // Initialize to empty list
+
+    }
+
+    public class Order
+    {
+        public int OrderId { get; set; }
+        public int CustomerId { get; set; }
+
+        // Navigation property for the related customer
+        public Customer Customer { get; set; }
+
+        // Navigation property for the related ItemOrders (join table)
+        public virtual ICollection<ItemOrder> ItemOrders { get; set; } = new List<ItemOrder>();
+
+        // Non-mapped property for items
+        [NotMapped]
+        public ICollection<Item> Items
+        {
+            get
+            {
+                return ItemOrders?.Select(io => io.Item).ToList();
+            }
+        }
     }
 
     public class ItemOrder
     {
+        public int ItemOrderId {  get; set; }
         public int OrderId { get; set; }
+        public int ItemId { get; set; }
+
+        // Navigation property for the related order
         public Order Order { get; set; }
 
-        public int ItemId { get; set; }
+        // Navigation property for the related item
         public Item Item { get; set; }
     }
-
 }

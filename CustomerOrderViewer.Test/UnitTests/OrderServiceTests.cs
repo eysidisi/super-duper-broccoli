@@ -3,7 +3,7 @@ using CustomerOrderViewer.Models;
 using CustomerOrderViewer.Services;
 using Moq;
 
-namespace CustomerContentViewer.Tests.UnitTests
+namespace CustomerOrderViewer.Test.UnitTests
 {
     public class OrderServiceTests
     {

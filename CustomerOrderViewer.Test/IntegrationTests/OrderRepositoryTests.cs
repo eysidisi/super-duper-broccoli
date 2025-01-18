@@ -3,7 +3,7 @@ using CustomerOrderViewer.Models;
 using CustomerOrderViewer.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace CustomerOrderViewer.Tests.IntegrationTests
+namespace CustomerOrderViewer.Test.IntegrationTests
 {
     public class OrderRepositoryTests : IDisposable
     {
